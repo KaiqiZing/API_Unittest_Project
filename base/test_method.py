@@ -41,13 +41,13 @@ class TestMethod(unittest.TestCase):
 
 
         # 引入mock，mock基本使用；
+        # self.run = RunMain(url,"POST")
         # mock_data = mock.Mock(return_value=data)
-        # self.run.run_main = mock_data
+        # self.run.run_main = mock_data  # 模拟出来的返回结果
         # res = self.run.run_main(url, "POST", data)
 
         # 封装mock后的用法：
         self.run = RunMain(url,"POST")
-
         res = mock_test(self.run.run_main, data, url, "POST", data)
 
         # 引入断言做判断
