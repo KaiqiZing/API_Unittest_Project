@@ -11,6 +11,6 @@ class OperationJson:
             return data
     def get_json_data(self, id):
         return self.data[id]
-if __name__ == '__main__':
-    opjson = OperationJson()
-    print(opjson.get_json_data("addcart"))
+# if __name__ == '__main__':
+#     opjson = OperationJson()
+#     print(opjson.get_json_data("addcart"))

@@ -32,7 +32,7 @@ class OperationExcel:
 
 
     # 写入数据
-    def write_value(self, row,col, value):
+    def write_value(self, row, col, value):
         read_data = xlrd.open_workbook(self.file_name)
         write_data = copy(read_data)
         sheet_data = write_data.get_sheet(0)
