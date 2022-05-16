@@ -39,7 +39,7 @@ class OperationExcel:
         sheet_data.write(row,col,value)
         write_data.save(self.file_name)
 
-    # 根据caseid找到对应的行内容
+    # 根据caseid找到对应的行内容--执行依赖case获取对应的依赖数据
     def get_row_data(self, case_id):
         row_num = self.get_row_num(case_id)
         row_data = self.get_row_values(row_num)
@@ -71,6 +71,6 @@ class OperationExcel:
         return cols
 if __name__ == '__main__':
     opera = OperationExcel()
-    print(opera.get_cell_value(1,1))
-
+    # print(opera.get_cell_value(1,1))
+    print(opera.get_row_data("Imooc-11"))
 
